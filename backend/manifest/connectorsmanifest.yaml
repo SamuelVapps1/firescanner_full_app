@@ -1,0 +1,23 @@
+# Connector manifest for the FireScanner full application.
+
+venues:
+  sample_venue:
+    ws: "wss://demo.example.com/ws"
+    rest: "https://demo.example.com/api"
+    discovery_universe:
+      - SYM001
+      - SYM002
+      - SYM003
+    limits:
+      requests_per_minute: 60
+      jitter_backoff: true
+  secondary_venue:
+    ws: "wss://secondary.example.com/ws"
+    rest: "https://secondary.example.com/api"
+    discovery_universe:
+      - SYM101
+      - SYM102
+      - SYM103
+    limits:
+      requests_per_minute: 30
+      jitter_backoff: true

@@ -1,0 +1,27 @@
+# Example scoring rules for the FireScanner full application.
+
+# The `weights` section would normally specify the relative importance
+# of individual factors used to compute the composite score.  These
+# values are placeholders for demonstration only.
+weights:
+  volatility: 0.4
+  momentum: 0.3
+  fundamentals: 0.3
+
+# The `thresholds` section defines boundaries for categories such as
+# high or low scores.  Thresholds can be used to derive badges or
+# freshness indicators.  These are examples and may be modified.
+thresholds:
+  high: 90.0
+  medium: 75.0
+  low: 50.0
+
+# The `badges` section lists optional badges that can be assigned to
+# items based on criteria.  Production logic can refer to this
+# configuration when deriving badges.  In this demo the criteria are
+# implemented directly in the engine.
+badges:
+  elite:
+    criteria: "score > 90"
+  high:
+    criteria: "score > 75"
